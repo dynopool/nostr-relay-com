@@ -1,0 +1,130 @@
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card {
+  background-color: #1b1b1b;
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  max-width: 640px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f39c12;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.steps {
+  margin-top: 1.5rem;
+}
+
+code {
+  background-color: #1e1e1e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  word-break: break-all;
+  font-size: 0.95rem;
+}
+
+.highlight {
+  color: #4fc3ff;
+}
+
+.highlight:hover {
+  color: #80d8ff;
+  text-decoration: underline;
+}
+
+.npub-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.npub-button {
+  position: relative;
+  background: #262626;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.npub-button:hover {
+  border-color: #00bfff;
+  box-shadow: 0 0 0 1px rgba(0, 191, 255, 0.3);
+}
+
+.tooltip {
+  position: absolute;
+  top: -2.2rem;
+  right: 0.75rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
